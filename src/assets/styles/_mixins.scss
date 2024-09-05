@@ -1,0 +1,3 @@
+@mixin gradient-background($color) {
+  background-image: linear-gradient(180deg, $color 0.4rem, white 0.4rem);
+}
