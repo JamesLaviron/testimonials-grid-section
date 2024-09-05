@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+main {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  gap: $spacing-240;
+}
+
+.card:nth-of-type(1) {
+  @include card(
+    (
+      background-color: $color-purple,
+      text-color: $color-white-100,
+      graduation-opacity: 0.5,
+      quote-color: $color-grey-200,
+      quote-opacity: 0.7,
+    )
+  );
+
+  grid: 1 / span 1 / 1 / span 2;
+}
+
+.card:nth-of-type(2) {
+  @include card(
+    (
+      background-color: $color-blue,
+      text-color: $color-white-100,
+      graduation-opacity: 0.5,
+      quote-color: $color-white-100,
+      quote-opacity: 0.7,
+    )
+  );
+  grid: 1 / span 1 / 1 / span 1;
+}
+
+.card:nth-of-type(3) {
+  grid: 1 / span 1 / 1 / span 2;
+}
+.card:nth-of-type(4) {
+  grid: 1 / span 1 / 1 / span 1;
+}
+.card:nth-of-type(3),
+.card:nth-of-type(4) {
+  @include card(
+    (
+      background-color: $color-white-100,
+      text-color: $color-blue,
+      graduation-opacity: 0.5,
+      quote-opacity: 0.7,
+    )
+  );
+  grid: 1 / span 2 / 1 / span 1;
+}
+
+.card:nth-of-type(5) {
+  @include card(
+    (
+      background-color: $color-black,
+      text-color: $color-white-200,
+      graduation-opacity: 0.5,
+      quote-opacity: 0.7,
+    )
+  );
+
+  .card__description {
+    color: $color-white-200;
+  }
+}
+
+// Handle tablet
+@media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet)) {
+  main {
+    padding: 20% 10%;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    gap: $spacing-240 $spacing-300;
+  }
+}
+
+// Handle desktop
+@media (min-width: $breakpoint-tablet) {
+  main {
+    padding: 20% 10%;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: $spacing-240 $spacing-300;
+  }
+}
