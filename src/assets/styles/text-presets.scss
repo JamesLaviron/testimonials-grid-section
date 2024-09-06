@@ -1,8 +1,35 @@
-/* Text Preset 1 */
-@mixin text-preset-1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
+@mixin barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: 36px;
-  letter-spacing: 0.25px;
+}
+
+@mixin barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin text-preset-1 {
+  @include barlow-semi-condensed-medium;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+@mixin text-preset-2 {
+  @include barlow-semi-condensed-medium;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+@mixin text-preset-3 {
+  @include barlow-semi-condensed-semibold;
+  font-size: 20px;
+  line-height: auto;
+}
+
+@mixin text-preset-4 {
+  @include barlow-semi-condensed-medium;
+  font-size: 13px;
+  line-height: 18px;
 }

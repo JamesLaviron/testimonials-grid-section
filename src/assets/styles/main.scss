@@ -6,9 +6,56 @@ body {
 }
 
 main {
-  display: grid;
-  grid-template: 1fr / 1fr;
+  display: flex;
+  flex-direction: column;
   gap: $spacing-240;
+  background-color: $color-white-300;
+  padding: 7.1rem 2.4rem;
+}
+
+.card {
+  padding: 2.6rem 3.2rem 3.2rem 3.2rem;
+  box-shadow: 0 -31.3rem 25.2rem 0 $color-white-100-50,
+    4 6rem 5rem -4.7rem $color-blue-24;
+  border-radius: 0.8rem;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.card__header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__avatar {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+.card__title {
+  @include text-preset-1;
+}
+
+.card__graduation {
+  @include text-preset-2;
+}
+
+.card__description {
+  @include text-preset-3;
+  padding-block-start: 1.8rem;
+  padding-block-end: 1.6rem;
+}
+
+.card__quote {
+  @include text-preset-4;
 }
 
 .card:nth-of-type(1) {
@@ -21,8 +68,6 @@ main {
       quote-opacity: 0.7,
     )
   );
-
-  grid: 1 / span 1 / 1 / span 2;
 }
 
 .card:nth-of-type(2) {
@@ -35,15 +80,10 @@ main {
       quote-opacity: 0.7,
     )
   );
-  grid: 1 / span 1 / 1 / span 1;
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
 }
 
-.card:nth-of-type(3) {
-  grid: 1 / span 1 / 1 / span 2;
-}
-.card:nth-of-type(4) {
-  grid: 1 / span 1 / 1 / span 1;
-}
 .card:nth-of-type(3),
 .card:nth-of-type(4) {
   @include card(
@@ -54,7 +94,6 @@ main {
       quote-opacity: 0.7,
     )
   );
-  grid: 1 / span 2 / 1 / span 1;
 }
 
 .card:nth-of-type(5) {
@@ -72,20 +111,75 @@ main {
   }
 }
 
+@media (min-width: $breakpoint-tablet) {
+  .card:nth-of-type(1) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+  .card:nth-of-type(2) {
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  .card:nth-of-type(3) {
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 2;
+  }
+  .card:nth-of-type(4) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .card:nth-of-type(5) {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+  }
+}
+
 // Handle tablet
 @media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet)) {
   main {
-    padding: 20% 10%;
+    display: grid;
+    padding: 5% 5%;
     grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    // grid-template: 28.2rem 26.6rem / 25.5rem 28.5rem 25.5rem 25.5rem;
     gap: $spacing-240 $spacing-300;
+  }
+
+  .card__description {
+    padding-block-end: 4rem;
+  }
+
+  .card:nth-of-type(1) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+  .card:nth-of-type(2) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .card:nth-of-type(3) {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+  .card:nth-of-type(4) {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+  }
+  .card:nth-of-type(5) {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
   }
 }
 
 // Handle desktop
 @media (min-width: $breakpoint-tablet) {
   main {
-    padding: 20% 10%;
+    display: grid;
+    padding: 5% 5%;
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
     gap: $spacing-240 $spacing-300;
+  }
+
+  .card__description {
+    padding-block-end: 4rem;
   }
 }
