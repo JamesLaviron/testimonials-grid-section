@@ -1,0 +1,17 @@
+.card--quoted {
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 7.5%;
+
+  @include tablet {
+    .card--quoted {
+      background-position: top 0 right 12%;
+    }
+  }
+
+  @include desktop {
+    .card--quoted {
+      background-position: top 0 right 15%;
+    }
+  }
+}

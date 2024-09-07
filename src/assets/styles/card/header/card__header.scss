@@ -1,0 +1,9 @@
+.card__header {
+  gap: $spacing-extrasmall;
+}
+
+.card__header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

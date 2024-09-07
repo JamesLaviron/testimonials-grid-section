@@ -1,9 +1,21 @@
-@mixin gradient-background($color) {
-  background-image: linear-gradient(180deg, $color 0.4rem, white 0.4rem);
-}
-
 @mixin common-main-styles {
   display: grid;
   padding: $spacing-xxxlarge $spacing-xxxlarge;
   gap: $spacing-regular $spacing-medium;
+}
+
+/**
+* Media queries
+*/
+
+@mixin desktop {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
 }

@@ -1,0 +1,22 @@
+/**
+* Card themes
+*/
+.card--theme--purple {
+  background-color: $color-purple;
+  color: $color-white-100;
+}
+
+.card--theme--blue {
+  background-color: $color-blue;
+  color: $color-white-100;
+}
+
+.card--theme--white {
+  background-color: $color-white-100;
+  color: $color-blue;
+}
+
+.card--theme--black {
+  background-color: $color-black;
+  color: $color-white-200;
+}

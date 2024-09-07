@@ -1,9 +1,8 @@
-main {
+body {
   display: flex;
-  flex-direction: column;
-  gap: $spacing-regular;
-  background-color: $color-white-300;
-  padding: $spacing-xlarge-plus $spacing-regular;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 .card {
