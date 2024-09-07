@@ -3,14 +3,10 @@
   padding-block-end: $spacing-extrasmall;
 
   @include tablet {
-    .card__description {
-      padding-block-end: $spacing-large;
-    }
+    padding-block-end: $spacing-large;
   }
 
   @include desktop {
-    .card__description {
-      padding-block-end: $spacing-large;
-    }
+    padding-block-end: $spacing-large;
   }
 }

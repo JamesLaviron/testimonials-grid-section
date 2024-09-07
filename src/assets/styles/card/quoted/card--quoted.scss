@@ -4,14 +4,10 @@
   background-position: top 0 right 7.5%;
 
   @include tablet {
-    .card--quoted {
-      background-position: top 0 right 12%;
-    }
+    background-position: top 0 right 12%;
   }
 
   @include desktop {
-    .card--quoted {
-      background-position: top 0 right 15%;
-    }
+    background-position: top 0 right 15%;
   }
 }

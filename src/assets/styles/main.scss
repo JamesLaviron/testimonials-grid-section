@@ -1,9 +1,9 @@
-@use "./card/card.scss";
-@use "./card/avatar/card__avatar.scss";
-@use "./card/quoted/card--quoted.scss";
-@use "./card/header/card__header.scss";
-@use "./card/decription/card__description.scss";
-@use "./card/theme/card--theme.scss";
+@import "./card/card.scss";
+@import "./card/avatar/card__avatar.scss";
+@import "./card/quoted/card--quoted.scss";
+@import "./card/header/card__header.scss";
+@import "./card/decription/card__description.scss";
+@import "./card/theme/card--theme.scss";
 
 main {
   display: flex;
