@@ -1,6 +1,6 @@
 <template>
   <main>
-    <article class="card card--theme--purple">
+    <article class="card card--theme--purple card--quoted">
       <header class="header card__header">
         <img
           class="avatar card__avatar"
