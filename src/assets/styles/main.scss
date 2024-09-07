@@ -1,3 +1,4 @@
+// Apply spacing variables
 body {
   display: flex;
   justify-content: center;
@@ -5,26 +6,8 @@ body {
   width: 100vw;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-240;
-  background-color: $color-white-300;
-  padding: 7.1rem 2.4rem;
-}
-
-.card {
-  padding: 2.6rem 3.2rem 3.2rem 3.2rem;
-  box-shadow: 0 -31.3rem 25.2rem 0 $color-white-100-50,
-    4 6rem 5rem -4.7rem $color-blue-24;
-  border-radius: 0.8rem;
-}
-
 .card__header {
-  display: flex;
-  flex-direction: row;
-  gap: 1.6rem;
-  align-items: center;
+  gap: $spacing-extrasmall;
 }
 
 .card__header-text {
@@ -34,84 +17,90 @@ main {
 }
 
 .card__avatar {
-  height: 4.8rem;
-  width: 4.8rem;
-  border-radius: 50%;
-  vertical-align: center;
-}
-
-.card__title {
-  @include text-preset-1;
-}
-
-.card__graduation {
-  @include text-preset-2;
+  height: $spacing-xlarge;
+  width: $spacing-xlarge;
 }
 
 .card__description {
-  @include text-preset-3;
-  padding-block-start: 1.8rem;
-  padding-block-end: 1.6rem;
+  padding-block-start: $spacing-small;
+  padding-block-end: $spacing-extrasmall;
 }
 
-.card__quote {
-  @include text-preset-4;
+/**
+* Card themes
+*/
+.card--theme--purple {
+  background-color: $color-purple;
+  color: $color-white-100;
 }
 
-.card:nth-of-type(1) {
-  @include card(
-    (
-      background-color: $color-purple,
-      text-color: $color-white-100,
-      graduation-opacity: 0.5,
-      quote-color: $color-grey-200,
-      quote-opacity: 0.7,
-    )
-  );
+.card--theme--blue {
+  background-color: $color-blue;
+  color: $color-white-100;
 }
 
-.card:nth-of-type(2) {
-  @include card(
-    (
-      background-color: $color-blue,
-      text-color: $color-white-100,
-      graduation-opacity: 0.5,
-      quote-color: $color-white-100,
-      quote-opacity: 0.7,
-    )
-  );
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
+.card--theme--white {
+  background-color: $color-white-100;
+  color: $color-blue;
 }
 
-.card:nth-of-type(3),
-.card:nth-of-type(4) {
-  @include card(
-    (
-      background-color: $color-white-100,
-      text-color: $color-blue,
-      graduation-opacity: 0.5,
-      quote-opacity: 0.7,
-    )
-  );
+.card--theme--black {
+  background-color: $color-black;
+  color: $color-white-200;
 }
 
-.card:nth-of-type(5) {
-  @include card(
-    (
-      background-color: $color-black,
-      text-color: $color-white-200,
-      graduation-opacity: 0.5,
-      quote-opacity: 0.7,
-    )
-  );
+// Handle tablet
+@media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet)) {
+  main {
+    @include common-main-styles;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
 
   .card__description {
-    color: $color-white-200;
+    padding-block-end: $spacing-large;
+  }
+
+  /**
+  * Grid layout for tablet
+  */
+  .card:nth-of-type(1) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+  .card:nth-of-type(2) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .card:nth-of-type(3) {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 1;
+    height: fit-content;
+    align-self: center;
+  }
+  .card:nth-of-type(4) {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .card:nth-of-type(5) {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
   }
 }
 
+// Handle desktop
 @media (min-width: $breakpoint-tablet) {
+  main {
+    @include common-main-styles;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  }
+
+  .card__description {
+    padding-block-end: $spacing-large;
+  }
+
+  /**
+  * Grid layout for desktop
+  */
   .card:nth-of-type(1) {
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
@@ -131,55 +120,5 @@ main {
   .card:nth-of-type(5) {
     grid-row: 2 / span 1;
     grid-column: 2 / span 2;
-  }
-}
-
-// Handle tablet
-@media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet)) {
-  main {
-    display: grid;
-    padding: 5% 5%;
-    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-    // grid-template: 28.2rem 26.6rem / 25.5rem 28.5rem 25.5rem 25.5rem;
-    gap: $spacing-240 $spacing-300;
-  }
-
-  .card__description {
-    padding-block-end: 4rem;
-  }
-
-  .card:nth-of-type(1) {
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 2;
-  }
-  .card:nth-of-type(2) {
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 1;
-  }
-  .card:nth-of-type(3) {
-    grid-row: 3 / span 1;
-    grid-column: 1 / span 2;
-  }
-  .card:nth-of-type(4) {
-    grid-row: 2 / span 1;
-    grid-column: 2 / span 1;
-  }
-  .card:nth-of-type(5) {
-    grid-row: 4 / span 1;
-    grid-column: 1 / span 2;
-  }
-}
-
-// Handle desktop
-@media (min-width: $breakpoint-tablet) {
-  main {
-    display: grid;
-    padding: 5% 5%;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-    gap: $spacing-240 $spacing-300;
-  }
-
-  .card__description {
-    padding-block-end: 4rem;
   }
 }

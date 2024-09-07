@@ -1,28 +1,28 @@
 <template>
   <main>
-    <article class="card">
-      <header class="card__header">
+    <article class="card card--theme--purple">
+      <header class="header card__header">
         <img
-          class="card__avatar"
+          class="avatar card__avatar"
           src="./assets/images/image-daniel.jpg"
           alt="Daniel Clifford"
           width="48"
           height="48"
         />
-        <div class="card__header-text">
-          <h1 class="card__title">Daniel Clifford</h1>
-          <p class="card__graduation">Verified Graduate</p>
-        </div>
+        <section class="card__header-text">
+          <h1 class="title card__title">Daniel Clifford</h1>
+          <p class="graduation card__graduation">Verified Graduate</p>
+        </section>
       </header>
 
-      <p class="card__description">
+      <p class="description card__description">
         I received a job offer mid-course, and the subjects I learned were
         current, if not more so, in the company I joined. I honestly feel I got
         every penny’s worth.
       </p>
 
       <blockquote
-        class="card__quote"
+        class="quote card__quote u-text-grey"
         cite="https://example.com/testimonial/daniel-clifford"
       >
         <q>
@@ -36,25 +36,25 @@
         </q>
       </blockquote>
     </article>
-    <article class="card">
-      <header class="card__header">
+    <article class="card card--theme--blue">
+      <header class="header card__header">
         <img
-          class="card__avatar"
+          class="avatar card__avatar"
           src="./assets/images/image-jonathan.jpg"
           alt="Jonathan Walters"
         />
-        <div class="card__header-text">
-          <h1 class="card__title">Jonathan Walters</h1>
-          <p class="card__graduation">Verified Graduate</p>
-        </div>
+        <section class="card__header-text">
+          <h1 class="title card__title">Jonathan Walters</h1>
+          <p class="graduation card__graduation">Verified Graduate</p>
+        </section>
       </header>
 
-      <p class="card__description">
+      <p class="description card__description">
         The team was very supportive and kept me motivated.
       </p>
 
       <blockquote
-        class="card__quote"
+        class="quote card__quote u-text-white-1"
         cite="https://example.com/testimonial/jonathan-walters"
       >
         <q>
@@ -64,24 +64,24 @@
         </q>
       </blockquote>
     </article>
-    <article class="card">
-      <header class="card__header">
+    <article class="card card--theme--white">
+      <header class="header card__header">
         <img
-          class="card__avatar"
+          class="avatar card__avatar"
           src="./assets/images/image-kira.jpg"
           alt="Jeanette Harmon"
         />
-        <div class="card__header-text">
-          <h1 class="card__title">Kira Whittle</h1>
-          <p class="card__graduation">Verified Graduate</p>
-        </div>
+        <section class="card__header-text">
+          <h1 class="title card__title">Kira Whittle</h1>
+          <p class="graduation card__graduation">Verified Graduate</p>
+        </section>
       </header>
-      <p class="card__description">
+      <p class="description card__description">
         Such a life-changing experience. Highly recommended!
       </p>
 
       <blockquote
-        class="card__quote"
+        class="quote card__quote"
         cite="https://example.com/testimonial/kira-whittle"
       >
         <q>
@@ -99,24 +99,24 @@
         </q>
       </blockquote>
     </article>
-    <article class="card">
-      <header class="card__header">
+    <article class="card card--theme--white">
+      <header class="header card__header">
         <img
-          class="card__avatar"
+          class="avatar card__avatar"
           src="./assets/images/image-jeanette.jpg"
           alt="Patrick Abrams"
         />
-        <div class="card__header-text">
-          <h1 class="card__title">Jeanette Harmon</h1>
-          <p class="card__graduation">Verified Graduate</p>
-        </div>
+        <section class="card__header-text">
+          <h1 class="title card__title">Jeanette Harmon</h1>
+          <p class="graduation card__graduation">Verified Graduate</p>
+        </section>
       </header>
 
-      <p class="card__description">
+      <p class="description card__description">
         An overall wonderful and rewarding experience.
       </p>
       <blockquote
-        class="card__quote"
+        class="quote card__quote"
         cite="https://example.com/testimonial/jeanette-harmon"
       >
         <q>
@@ -126,25 +126,25 @@
         </q>
       </blockquote>
     </article>
-    <article class="card">
-      <header class="card__header">
+    <article class="card card--theme--black">
+      <header class="header card__header">
         <img
-          class="card__avatar"
+          class="avatar card__avatar"
           src="./assets/images/image-patrick.jpg"
           alt="Patrick Abrams"
         />
-        <div class="card__header-text">
-          <h1 class="card__title">Patrick Abrams</h1>
-          <p class="card__graduation">Verified Graduate</p>
-        </div>
+        <section class="card__header-text">
+          <h1 class="title card__title">Patrick Abrams</h1>
+          <p class="graduation card__graduation">Verified Graduate</p>
+        </section>
       </header>
-      <p class="card__description">
+      <p class="description card__description u-text-white-2">
         Awesome teaching support from TAs who did the bootcamp themselves.
         Getting guidance from them and learning from their experiences was easy.
       </p>
 
       <blockquote
-        class="card__quote"
+        class="quote card__quote u-text-white-1"
         cite="https://example.com/testimonial/patrick-abrams"
       >
         <q>

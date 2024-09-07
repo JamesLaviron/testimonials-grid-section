@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-regular;
+  background-color: $color-white-300;
+  padding: $spacing-xlarge-plus $spacing-regular;
+}
+
+.card {
+  padding: $spacing-regular-plus $spacing-medium-plus $spacing-medium-plus
+    $spacing-medium-plus;
+  box-shadow: 4rem 6rem 5rem -4.7rem $color-blue-24;
+  border-radius: 0.8rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+.title {
+  @include text-preset-1;
+}
+
+.graduation {
+  @include text-preset-2;
+  opacity: 0.5;
+}
+
+.description {
+  @include text-preset-3;
+}
+
+.quote {
+  @include text-preset-4;
+  opacity: 0.7;
+}
