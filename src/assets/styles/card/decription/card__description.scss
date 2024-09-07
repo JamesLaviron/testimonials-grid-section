@@ -3,10 +3,10 @@
   padding-block-end: $spacing-extrasmall;
 
   @include tablet {
-    padding-block-end: $spacing-large;
+    padding-block-end: $spacing-extrasmall;
   }
 
   @include desktop {
-    padding-block-end: $spacing-large;
+    padding-block-end: $spacing-extrasmall;
   }
 }

@@ -6,8 +6,8 @@
           class="avatar card__avatar"
           src="./assets/images/image-daniel.jpg"
           alt="Daniel Clifford"
-          width="48"
-          height="48"
+          width="28"
+          height="28"
         />
         <section class="card__header-text">
           <h1 class="title card__title">Daniel Clifford</h1>

@@ -14,9 +14,29 @@
 .card--theme--white {
   background-color: $color-white-100;
   color: $color-blue;
+
+  .card__description {
+    @include tablet {
+      padding-block-end: $spacing-regular;
+    }
+
+    @include desktop {
+      padding-block-end: $spacing-regular;
+    }
+  }
 }
 
 .card--theme--black {
   background-color: $color-black;
   color: $color-white-200;
+
+  .card__description {
+    @include tablet {
+      padding-block-end: $spacing-regular;
+    }
+
+    @include desktop {
+      padding-block-end: $spacing-regular;
+    }
+  }
 }

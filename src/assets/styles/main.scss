@@ -13,11 +13,11 @@ main {
 
   @include tablet {
     @include common-main-styles;
-    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(4, min-content) / repeat(2, 1fr);
   }
 
   @include desktop {
     @include common-main-styles;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(2, min-content) / repeat(4, 1fr);
   }
 }
