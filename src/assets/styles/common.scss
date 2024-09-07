@@ -1,9 +1,15 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100vw;
   background-color: $color-white-300;
+
+  @include tablet {
+    align-items: center;
+  }
+  @include desktop {
+    align-items: center;
+  }
 }
 
 .card {
